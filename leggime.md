@@ -4,7 +4,7 @@ Cluster OpenBSD Firewall
 # FAILOVER ofw1 (firewall 1)
 
     ofw1 # vi /etc/hostname.carp0
-    inet  93.46.173.116 255.255.255.240 93.46.173.127 vhid 1 carpdev bnx0 pass password1 advbase 1 advskew 0
+    inet  xx.xx.xxx.xxx 255.255.255.240 xx.xx.xxx.xxx vhid 1 carpdev bnx0 pass password1 advbase 1 advskew 0
 
     ofw1 # vi /etc/hostname.carp1
     inet 192.168.1.250 255.255.254.0 192.168.1.255 vhid 2 carpdev bge0 pass password1 advbase 1 advskew 0
@@ -39,13 +39,13 @@ Cluster OpenBSD Firewall
 
     # gateway 93.46.173.113
     /etc/mygate
-    93.46.173.113
+    xxx.xxx.xxx.xxx
 
 
 FAILOVER ofw2 (firewall 2)
 ^^^^^^^^^^^^^^^^^^^^^^^^^^
 ofw2 /etc/hostname.carp0
-inet  93.46.173.116 255.255.255.240 93.46.173.127 vhid 1 carpdev bnx0 pass password1 advbase 1 advskew 100
+inet  xxx.xxx.xxx.xxx 255.255.255.240 xxx.xxx.xxx.xxx vhid 1 carpdev bnx0 pass password1 advbase 1 advskew 100
 
 ofw2 /etc/hostname.carp1
 inet 192.168.1.250 255.255.254.0 192.168.1.255 vhid 2 carpdev bge0 pass password1 advbase 1 advskew 100
