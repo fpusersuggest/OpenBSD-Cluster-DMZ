@@ -14,32 +14,32 @@ Cluster OpenBSD Firewall
 
     ofw1 # vi /etc/sysctl.conf
     net.inet.carp.preempt=1
-
+  
     ofw1 # vi /etc/hostname.pfsync0
     up syncpeer 10.254.254.2 syncdev bnx1
 
-# internet 
-# range da 112 a 127
-# bcast 93.46.173.127 
-# gw 93.46.173.113
-/etc/hostname.bnx0
-inet 93.46.173.114 255.255.255.240 93.46.173.127 description "INTERNET"  
+    # internet 
+    # range da xxx a xxx
+    # bcast xxx.xxx.xxx.xxx 
+    # gw xxx.XXX.173.113
+    ofw1 # vi /etc/hostname.bnx0
+    inet xxx.XXX.xxx.xxx 255.255.255.240 xxx.xx.xxx.xxx description "INTERNET"  
 
-# pfsync
-/etc/hostname.bnx1
-inet 10.254.254.1 255.255.255.0 10.254.254.255 description "PFSYNC"
+    # pfsync
+    ofw1 # vi /etc/hostname.bnx1
+    inet 10.254.254.1 255.255.255.0 10.254.254.255 description "PFSYNC"
 
-# lan
-/etc/hostname.bge0
-inet 192.168.1.249 255.255.254.0 192.168.1.255 description "LAN"
+    # lan
+    /etc/hostname.bge0
+    inet 192.168.1.249 255.255.254.0 192.168.1.255 description "LAN"
 
-# dmz
-/etc/hostname.bge1
-inet 10.1.0.2 255.255.255.0 10.1.0.255 description "DMZ"
+    # dmz
+    /etc/hostname.bge1
+    inet 10.1.0.2 255.255.255.0 10.1.0.255 description "DMZ"
 
-# gateway 93.46.173.113
-/etc/mygate
-93.46.173.113
+    # gateway 93.46.173.113
+    /etc/mygate
+    93.46.173.113
 
 
 FAILOVER ofw2 (firewall 2)
