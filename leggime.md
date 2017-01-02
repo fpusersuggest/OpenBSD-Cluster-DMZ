@@ -2,6 +2,7 @@
 Cluster OpenBSD Firewall
 
 # NET Interfaces
+
 WAN = 203.0.113.1
 LAN = 192.168.1.250
 DMZ = 10.1.0.1
