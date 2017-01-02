@@ -13,7 +13,7 @@ Cluster OpenBSD Firewall
 # FAILOVER ofw1 (firewall 1)
 
     ofw1 # vi /etc/hostname.carp0
-    inet  xx.xx.xxx.xxx 255.255.255.240 xx.xx.xxx.xxx vhid 1 carpdev bnx0 pass password1 advbase 1 advskew 0
+    inet  203.0.113.1 255.255.255.240 xx.xx.xxx.xxx vhid 1 carpdev bnx0 pass password1 advbase 1 advskew 0
 
     ofw1 # vi /etc/hostname.carp1
     inet 192.168.1.250 255.255.254.0 192.168.1.255 vhid 2 carpdev bge0 pass password1 advbase 1 advskew 0
