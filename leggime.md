@@ -4,11 +4,12 @@ Cluster OpenBSD Firewall
 # NET Interfaces
 
 
-* WAN = 203.0.113.1
+* WAN = 203.0.113.1 [1]
 * LAN = 192.168.1.250
 * DMZ = 10.1.0.1
 * PFSYNC = 10.254.254.1
 
+[[1] 203.0.113.0/24 	TEST-NET-3, documentation and examples RFC 5737](https://tools.ietf.org/html/rfc5737)
 
 # FAILOVER ofw1 (firewall 1)
 
