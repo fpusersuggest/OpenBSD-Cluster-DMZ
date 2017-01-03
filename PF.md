@@ -7,7 +7,6 @@ Cluster OpenBSD Firewall
     rcctl disable squid
     rcctl enable pf
     rcctl disable pf
-## oppure
     pfctl -e
     pfctl -d
 ## liste
@@ -53,4 +52,19 @@ Cluster OpenBSD Firewall
     # setta interfaccia per le statistiche
     set loginterface interface
     # normal, high-latency, aggressive, conservative
-    set optimization option 
+    set optimization option
+    # non applica le regole a interface
+    set skip on interface
+    #
+    set state-policy option
+    set ruleset-optimization option
+
+## controllo
+    # pfctl -f  /etc/pf.conf  Load the pf.conf file
+    # pfctl -nf /etc/pf.conf  Parse the file, but don't load it
+    # pfctl -sr               Show the current ruleset
+    # pfctl -ss               Show the current state table
+    # pfctl -si               Show filter stats and counters
+    # pfctl -sa               Show EVERYTHING it can show
+    
+    
