@@ -35,3 +35,22 @@ Cluster OpenBSD Firewall
     pfctl -t spammers -T show
     pfctl -t spammers -T delete 203.0.113.0/24
     
+## opzioni
+    # imposta la policy di blocca a...drop (scarta il pacchetto) oppure return (ritorna un tcp/rst)
+    set block-policy option
+    * drop
+    * return
+    # imposta nomefile per il fingerprinting degli os
+    set fingerprints nomefile
+    # imposta il limite per *tipo* a *valore* 
+    set limit option value
+    # tipo puo' essere frags, src-nodes, states, tables, table-entries   
+    set limit frags 1000
+    set limit src-nodes 1000
+    set limit states 100
+    set limit tables 100
+    set limit table-entries 100
+    # setta interfaccia per le statistiche
+    set loginterface interface
+    # normal, high-latency, aggressive, conservative
+    set optimization option 
